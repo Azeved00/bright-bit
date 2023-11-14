@@ -2,7 +2,7 @@ local colors = require("bright-bit.colors")
  -- local v = vim
 
 local theme = {};
-theme.localSyntax = function ()
+theme.loadSyntax = function ()
     return {
         -- Syntax colors
         Whitespace = {fg = colors.non_text},
@@ -48,39 +48,49 @@ end
 theme.loadEditor = function ()
     local editor = {
         -- User interface colors
-        NormalFloat = {fg = colors.white, bg = colors.black},
+        Normal = {fg = colors.white, bg = colors.black},
         FloatBorder = {fg = colors.white, bg = colors.black},
+
         Cursor = {fg = colors.black, bg = colors.blue},
         CursorColumn = {bg = colors.cursor_line},
         CursorLine = {bg = colors.cursor_line},
+
         LineNr = {fg = colors.non_text, bg = colors.black},
         CursorLineNr = {fg = colors.white},
+
         DiffAdd = {fg = colors.green},
         DiffChange = {fg = colors.yellow},
         DiffDelete = {fg = colors.red},
         DiffText = {fg = colors.blue},
+
         IncSearch = {fg = colors.black, bg = colors.yellow},
         Search = {fg = colors.black, bg = colors.yellow},
+
         ErrorMsg = {fg = colors.white},
         ModeMsg = {fg = colors.white},
         MoreMsg = {fg = colors.white},
         WarningMsg = {fg = colors.red},
         Question = {fg = colors.purple},
+
         Pmenu = {fg = colors.black, bg = colors.white},
         PmenuSel = {fg = colors.white, bg = colors.blue},
         PmenuSbar = {bg = colors.selection},
         PmenuThumb = {bg = colors.white},
+
         SpellBad = {fg = colors.red},
         SpellCap = {fg = colors.yellow},
         SpellLocal = {fg = colors.yellow},
         SpellRare = {fg = colors.yellow},
+
         StatusLine = {fg = colors.blue, bg = colors.cursor_line},
         StatusLineNC = {fg = colors.comment, bg = colors.cursor_line},
         TabLine = {fg = colors.comment, bg = colors.cursor_line},
         TabLineFill = {fg = colors.comment, bg = colors.cursor_line},
         TabLineSel = {fg = colors.white, bg = colors.black},
+
         Visual = {bg = colors.selection},
         VisualNOS = {bg = colors.selection},
+
         ColorColumn = {bg = colors.cursor_line},
         Conceal = {fg = colors.white},
         Directory = {fg = colors.blue},
@@ -88,6 +98,7 @@ theme.loadEditor = function ()
         Folded = {fg = colors.white},
         FoldColumn = {fg = colors.white},
         SignColumn = {fg = colors.white},
+
         MatchParen = {fg = colors.blue, style = "underline"},
         SpecialKey = {fg = colors.white},
         Title = {fg = colors.green},

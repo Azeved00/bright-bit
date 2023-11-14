@@ -1,4 +1,4 @@
-local util = require("bright-bit.util")
+local util = require("bright-bit.utils")
 
 -- Load the theme
 local set = function()
