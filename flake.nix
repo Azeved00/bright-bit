@@ -14,7 +14,7 @@
         packages.${system}= {
             #bright-bit-nvim 
             default = pkgs.vimUtils.buildVimPlugin {
-                pname = "bright-bit.nvim";
+                name = "bright-bit.nvim";
                 version = "14-11-2023";
                 src = ./nvim/.;
                 meta.homepage = "";
