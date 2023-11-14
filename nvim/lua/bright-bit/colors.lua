@@ -1,4 +1,4 @@
-local bright_bit = {
+return {
     black       = "#282c34",
     red         = "#e06c75",
     green       = "#98c379",
@@ -15,4 +15,4 @@ local bright_bit = {
     selection   = "#474e5d"
 };
 
-return bright_bit;
+

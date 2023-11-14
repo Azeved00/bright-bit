@@ -1,5 +1,5 @@
 {
-    description = "A very basic flake";
+    description = "A simple theme";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -11,14 +11,18 @@
         pkgs = import nixpkgs { inherit system; };
     in
     {
-        packages.${system}= {
-            #bright-bit-nvim 
-            default = pkgs.vimUtils.buildVimPlugin {
+        nixosModules.colors = import ./colors.nix;
+
+        packages.${system} = {
+            nvim = pkgs.vimUtils.buildVimPlugin {
                 name = "bright-bit.nvim";
                 version = "14-11-2023";
                 src = ./nvim/.;
-                meta.homepage = "";
+                meta.homepage = "https://www.github.com/Azeved00/bright-bit";
             };
+
+
+            default = self.packages.${system}.nvim;
         };
     };
 }
