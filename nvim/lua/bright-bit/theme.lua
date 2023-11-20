@@ -7,7 +7,7 @@ theme.loadSyntax = function ()
         -- Syntax colors
         Whitespace = {fg = colors.non_text},
         NonText = {fg = colors.non_text},
-        Comment = {fg = colors.comment, style = "italic"},
+        Comment = {fg = colors.comment}, --maybe put italics
         Constant = {fg = colors.cyan},
         String = {fg = colors.green},
         Character = {fg = colors.green},
@@ -36,7 +36,7 @@ theme.loadSyntax = function ()
         SpecialChar = {fg = colors.white},
         Tag = {fg = colors.white},
         Delimiter = {fg = colors.white},
-        SpecialComment = {fg = colors.white},
+        SpecialComment = {fg = colors.comment},
         Debug = {fg = colors.purple},
         Underlined = {fg = colors.white},
         Ignore = {fg = colors.white},
@@ -139,7 +139,6 @@ end
 
 theme.loadFiletypes = function ()
 end
-
 theme.loadLSP = function()
 end
 

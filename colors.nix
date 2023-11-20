@@ -1,9 +1,9 @@
 {
     colors = {
-        non_text = "919baa";
         line = "313640";
         comment = "5c6370";
         selection = "474e5d";
+        non_text = "919baa";
 
         black = "282c34";
         red = "e06c75";

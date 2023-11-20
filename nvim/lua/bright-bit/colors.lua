@@ -10,7 +10,7 @@ return {
     white       = "#dcdfe4",
 
     non_text    = "#919baa",
-    comment_fg  = "#5c6370",
+    comment     = "#5c6370",
     cursor_line = "#313640",
     selection   = "#474e5d"
 };
