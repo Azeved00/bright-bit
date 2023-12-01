@@ -5,13 +5,19 @@
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
-    outputs = { self, nixpkgs } : 
+    outputs = { self, nixpkgs} : 
     let 
         system = "x86_64-linux";
         pkgs = import nixpkgs { inherit system; };
     in
     {
-        nixosModules.colors = import ./colors.nix;
+        nixosModules = {
+            colors  = import ./colors.nix;
+        };
+
+        homeManagerModules = {
+            firefox = import ./firefox ;
+        };
 
         packages.${system} = {
             nvim = pkgs.vimUtils.buildVimPlugin {
@@ -21,9 +27,10 @@
                 meta.homepage = "https://www.github.com/Azeved00/bright-bit";
             };
 
-
             default = self.packages.${system}.nvim;
         };
+
+        
     };
 }
 
