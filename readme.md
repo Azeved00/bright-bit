@@ -27,15 +27,24 @@ the colorscheme:
 ```
 
 
-## How to use:
-
 This theme is made with [nix enviroment](https://nixos.org/) in mind,
 as such you can use the [flake](./flake.nix) in your system config.
 
-The flake has 2 parts:
-- packages (plugins and etc)
-- colors module
+## Themed applications:
 
-you can use [this config](https://www.github.com/Azeved00/.files) as an example.
+- [Neovim](./neovim/)
+- [Firefox] (./firefox/)
+- [Sddm](./sddm/)
+
+## How to use:
+### Nix version
+Include  the modules (nixosModules or homemanagerModules) and then enable.
+
+### Non nix version
+Checkout the readmes for each plugin.
+
+## Example config:
+
+You can use [this config](https://www.github.com/Azeved00/.files) as an example.
 In this you can see both the colors module and the neovim plugin being used.
 

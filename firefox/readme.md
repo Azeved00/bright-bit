@@ -11,10 +11,5 @@ in [about:config](about:config) set `toolkit.legacyUserProfileCustomizations.sty
 2. place the files [userChrome.css](./userChrome.css) and [userContent.css](userContent.css) inside the `chrome` directory
 (create it if it doesn't exist)
 
-### How to Install - nix version
-
-enable `bright-bit.firefox`
-
 ### Credits
-
 The files were based of of [ayushhroyy's elegantfox](https://github.com/ayushhroyy/elegantfox)

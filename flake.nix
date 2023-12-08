@@ -1,5 +1,5 @@
 {
-    description = "A simple theme";
+    description = "The bright bit theme";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -13,6 +13,7 @@
     {
         nixosModules = {
             colors  = import ./colors.nix;
+            sddm = import ./sddm;
         };
 
         homeManagerModules = {
@@ -28,6 +29,7 @@
             };
 
             default = self.packages.${system}.nvim;
+
         };
 
         
