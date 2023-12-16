@@ -21,15 +21,8 @@
         };
 
         packages.${system} = {
-            nvim = pkgs.vimUtils.buildVimPlugin {
-                name = "bright-bit.nvim";
-                version = "14-11-2023";
-                src = ./nvim/.;
-                meta.homepage = "https://www.github.com/Azeved00/bright-bit";
-            };
-
-            default = self.packages.${system}.nvim;
-
+            nvim = import ./nvim ( pkgs );
+            default = import ./nvim (pkgs);
         };
 
         
