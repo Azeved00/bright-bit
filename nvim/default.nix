@@ -1,8 +1,19 @@
-{pkgs, ...}:
+{lib, config, pkgs, ...}: with lib;
+let
+    cfg = config.bright-bit.nvim;
+    package = import ./package.nix (pkgs);
+in
+{
+    imports = [ ];
 
-pkgs.vimUtils.buildVimPlugin {
-    name = "bright-bit.nvim";
-    version = "14-11-2023";
-    src = ./.;
-    meta.homepage = "https://www.github.com/Azeved00/bright-bit";
+    options.bright-bit.nvim = {
+        enable = mkEnableOption "Enable nvim theme";
+    };
+
+    config = mkIf cfg.enable {
+        programs.neovim.plugins = [
+            package
+        ];
+        
+    };
 }

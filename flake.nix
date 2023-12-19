@@ -12,6 +12,7 @@
     in
     {
         nixosModules = {
+            default = import ./.;
             colors  = import ./colors.nix;
             sddm = import ./sddm;
         };
@@ -21,8 +22,9 @@
         };
 
         packages.${system} = {
-            nvim = import ./nvim ( pkgs );
-            default = import ./nvim (pkgs);
+            nvim = import ./nvim/package.nix ( pkgs );
+            sddm = import ./sddm/package.nix ( pkgs );
+            default = import ./nvim/package.nix ( pkgs );
         };
 
         

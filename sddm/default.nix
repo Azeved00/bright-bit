@@ -1,30 +1,7 @@
 {lib, config, pkgs, ...}: with lib;
 let
     cfg = config.bright-bit.sddm;
-    sddm = pkgs.stdenvNoCC.mkDerivation {
-        name = "teeny-sddm";
-        version = "16-11-2023";
-        dontBuild = true;
-        
-        src = ./.;
-
-        nativeBuildInputs = with pkgs.libsForQt5; [
-            wrapQtAppsHook
-        ];
-
-        propagatedUserEnvPkgs = with pkgs.libsForQt5; [
-            qtbase
-            qtsvg
-            qtgraphicaleffects
-            qtquickcontrols2
-        ];
-
-
-        installPhase = ''
-            mkdir -p $out/share/sddm/themes
-            cp -aR $src $out/share/sddm/themes/teeny-sddm
-        '';
-    };
+    package = import ./package.nix (pkgs);
 in
 {
     imports = [ ];
@@ -39,6 +16,6 @@ in
             theme = "bright-bit";
         };
 
-        environment.systemPackages = [ sddm ];
+        environment.systemPackages = [ package ];
     };
 }
