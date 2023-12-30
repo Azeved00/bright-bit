@@ -1,12 +1,12 @@
 {lib, config, pkgs, ...}: with lib;
 let
-    cfg = config.bright-bit.nvim;
+    cfg = config.bright-bit.user.nvim;
     package = import ./package.nix (pkgs);
 in
 {
     imports = [ ];
 
-    options.bright-bit.nvim = {
+    options.bright-bit.user.nvim = {
         enable = mkEnableOption "Enable nvim theme";
     };
 

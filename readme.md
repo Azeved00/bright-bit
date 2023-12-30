@@ -37,14 +37,34 @@ as such you can use the [flake](./flake.nix) in your system config.
 - [Sddm](./sddm/)
 
 ## How to use:
-### Nix version
-Include  the modules (nixosModules or homemanagerModules) and then enable.
-
 ### Non nix version
-Checkout the readmes for each plugin.
+Checkout the readmes for each aplication/plugin (see list above).
 
-## Example config:
+### Nix version
+Include the modules (nixosModule, homemanagerModule or a specific module) and
+then enable as needed.
 
-You can use [this config](https://www.github.com/Azeved00/.files) as an example.
-In this you can see both the colors module and the neovim plugin being used.
 
+### Nix Options
+bright-bit
+- colors
+    - black
+	- ...
+	- white
+- apps
+    - system (needs nixosModule)
+	    - enable
+		- sddm
+		    - enable
+	- user (needs homemanagerModule)
+        - enable
+        - firefox
+		    - enable
+        - nvim
+		    - enable
+		- ~~lf~~
+		- ~~alacrity~~
+		- ~~rofi~~
+		
+Striketrough options are not implemented.
+You can use as `bright-bit.apps,user.firefox.enable = true`.

@@ -11,14 +11,16 @@
         pkgs = import nixpkgs { inherit system; };
     in
     {
+        nixosModule = import ./system.nix;
         nixosModules = {
-            default = import ./.;
             colors  = import ./colors.nix;
             sddm = import ./sddm;
         };
 
+        homeManagerModule = import ./user.nix;
         homeManagerModules = {
             firefox = import ./firefox ;
+            nvim = import ./nvim ;
         };
 
         packages.${system} = {

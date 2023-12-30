@@ -1,18 +1,17 @@
 {lib, config, pkgs, ...}: with lib;
 let
-    cfg = config.bright-bit.sddm;
+    cfg = config.bright-bit.system.sddm;
     package = import ./package.nix (pkgs);
 in
 {
     imports = [ ];
 
-    options.bright-bit.sddm = {
+    options.bright-bit.system.sddm = {
         enable = mkEnableOption "Enable bright-bit sddm theme";
     };
 
     config = mkIf cfg.enable {
         services.xserver.displayManager.sddm = {
-            enable = true;
             theme = "bright-bit";
         };
 
