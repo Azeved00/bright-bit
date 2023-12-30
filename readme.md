@@ -33,7 +33,7 @@ as such you can use the [flake](./flake.nix) in your system config.
 ## Themed applications:
 
 - [Neovim](./neovim/)
-- [Firefox] (./firefox/)
+- [Firefox](./firefox/)
 - [Sddm](./sddm/)
 
 ## How to use:
@@ -45,7 +45,7 @@ Include the modules (nixosModule, homemanagerModule or a specific module) and
 then enable as needed.
 
 
-### Nix Options
+#### Nix Options
 bright-bit
 - colors
     - black
@@ -67,4 +67,5 @@ bright-bit
 		- ~~rofi~~
 		
 Striketrough options are not implemented.
+
 You can use as `bright-bit.apps,user.firefox.enable = true`.
