@@ -7,14 +7,22 @@ in
 
     options.bright-bit.user.firefox = {
         enable = mkEnableOption "Enable firefox theme";
+        profile = mkOption {
+            description = "Profile to activate firefox theme in";
+            type = types.str;
+            default = "default";
+        };
     };
 
     config = mkIf cfg.enable {
         programs.firefox = {
-            profiles.default = {
+            profiles."${cfg.profile}" = {
                 isDefault = true;
                 userChrome =  builtins.readFile ./userChrome.css;
                 userContent = builtins.readFile ./userContent.css;
+                settings = {
+                    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+                };
             };
         };
     };
