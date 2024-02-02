@@ -1,80 +1,82 @@
-{lib, ...}:
+{pkgs, ...}:
+
 {
-    options.bright-bit.colors = {
-        non_text = lib.mkOption {
-            type = lib.types.string;
+    options.bright-bit.colors = with pkgs.lib; {
+        non_text = mkOption {
+            type = types.string;
             description = "Non text color";
             default = "919baa";
         };
 
-        line = lib.mkOption {
-            type = lib.types.string;
+        line = mkOption {
+            type = types.string;
             description = "Line color";
             default = "313640";
         };
 
-        comment = lib.mkOption {
-            type = lib.types.string;
+        comment = mkOption {
+            type = types.string;
             description = "Comment color";
             default = "5c6370";
         };
 
-        selection = lib.mkOption {
-            type = lib.types.string;
+        selection = mkOption {
+            type = types.string;
             description = "Selection color";
             default = "474e5d";
         };
 
-        black = lib.mkOption {
-            type = lib.types.string;
+        black = mkOption {
+            type = types.string;
             description = "Background color";
             default = "282c34";
         };
 
-        white = lib.mkOption {
-            type = lib.types.string;
+        white = mkOption {
+            type = types.string;
             description = "Foreground color";
             default ="dcdfe4";
         };
         
-        red = lib.mkOption {
-            type = lib.types.string;
+        red = mkOption {
+            type = types.string;
             description = "Red color";
             default ="e06c75";
         };
 
-        orange = lib.mkOption {
-            type = lib.types.string;
+        orange = mkOption {
+            type = types.string;
             description = "Orange color";
             default = "de935f";
         };
 
-        yellow = lib.mkOption {
-            type = lib.types.string;
+        yellow = mkOption {
+            type = types.string;
             description = "Yellow color";
             default ="e5c07b";
         };
 
-        green = lib.mkOption {
-            type = lib.types.string;
+        green = mkOption {
+            type = types.string;
             description = "Green color";
             default =  "98c379";
         };
 
-        cyan = lib.mkOption {
-            type = lib.types.string;
+        cyan = mkOption {
+            type = types.string;
             description = "Cyan color";
             default = "56b6c2";
         };
 
-        magenta = lib.mkOption {
-            type = lib.types.string;
+        magenta = mkOption {
+            type = types.string;
             description = "Magenta color";
             default = "c678dd";
         };
     };
 
-    config = {};
+    config = {
+    };
 
 }
 

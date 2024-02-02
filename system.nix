@@ -11,7 +11,7 @@ in
         enable = mkEnableOption "Enable bright bit themed system applications (nvim for example)";
     };
 
-    config = mkIf cfg.enable{
+    config = mkIf cfg.enable {
         bright-bit.system.sddm.enable = true;
     };
 }
