@@ -35,6 +35,7 @@ as such you can use the [flake](./flake.nix) in your system config.
 - [Neovim](./neovim/)
 - [Firefox](./firefox/)
 - [Sddm](./sddm/)
+- [Dunst[(./dunst)
 
 ## How to use:
 ### Non nix version
@@ -60,12 +61,15 @@ bright-bit
         - enable
         - firefox
 		    - enable
+            - profile
         - nvim
 		    - enable
+        - dunst
+            - enable
 		- ~~lf~~
 		- ~~alacrity~~
 		- ~~rofi~~
 		
 Striketrough options are not implemented.
 
-You can use as `bright-bit.apps,user.firefox.enable = true`.
+You can use as `bright-bit.apps.user.firefox.enable = true`.

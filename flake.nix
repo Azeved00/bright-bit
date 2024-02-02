@@ -19,8 +19,10 @@
 
         homeManagerModule = import ./user.nix;
         homeManagerModules = {
+            colors  = import ./colors.nix;
             firefox = import ./firefox ;
             nvim = import ./nvim ;
+            dunst = import ./dunst;
         };
 
         packages.${system} = {

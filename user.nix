@@ -6,6 +6,7 @@ in
     imports = [ 
         ./firefox 
         ./nvim
+        ./dunst
     ];
 
     options.bright-bit.user = {
@@ -15,5 +16,6 @@ in
     config = mkIf cfg.enable {
         bright-bit.user.firefox.enable = true;
         bright-bit.user.nvim.enable = true;
+        bright-bit.user.dunst.enable = true;
     };
 }
