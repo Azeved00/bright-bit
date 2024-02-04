@@ -17,12 +17,11 @@ in
     config = mkIf cfg.enable {
         programs.firefox = {
             profiles."${cfg.profile}" = {
-                isDefault = true;
                 userChrome =  builtins.readFile ./userChrome.css;
                 userContent = builtins.readFile ./userContent.css;
-                settings = {
-                    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-                };
+                extraConfig = ''
+                  user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+                '';
             };
         };
     };
