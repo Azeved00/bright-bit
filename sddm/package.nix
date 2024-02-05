@@ -21,6 +21,6 @@ pkgs.stdenvNoCC.mkDerivation {
 
         installPhase = ''
             mkdir -p $out/share/sddm/themes
-            cp -aR $src $out/share/sddm/themes/teeny-sddm
+            cp -aR $src $out/share/sddm/themes/bright-bit
         '';
 }
