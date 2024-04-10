@@ -96,11 +96,11 @@ Rectangle {
             anchors.left: parent.left
         }
 
-        Clock {
-            id: time
+        Clock_ {
+            id: clock_
 
             anchors {
-                margins: 150
+                margins: config.clockSize*2
                 top: parent.top
                 horizontalCenter:parent.horizontalCenter
             }
