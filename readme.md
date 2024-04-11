@@ -57,6 +57,7 @@ bright-bit
 	    - enable
 		- sddm
 		    - enable
+            - theme-config
 	- user (needs homemanagerModule)
         - enable
         - firefox
