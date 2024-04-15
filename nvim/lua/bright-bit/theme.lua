@@ -7,7 +7,7 @@ theme.loadSyntax = function ()
         -- Syntax colors
         Whitespace = {fg = colors.non_text},
         NonText = {fg = colors.non_text},
-        Comment = {fg = colors.comment}, --maybe put italics
+        Comment = {fg = colors.comment, style="italic"},
         Constant = {fg = colors.cyan},
         String = {fg = colors.green},
         Character = {fg = colors.green},
@@ -41,7 +41,7 @@ theme.loadSyntax = function ()
         Underlined = {fg = colors.white},
         Ignore = {fg = colors.white},
         Error = {fg = colors.red, bg = colors.black},
-        Todo = {fg = colors.yellow},
+        Todo = {bg = colors.yellow, fg=colors.black},
        }
 end
 
@@ -135,6 +135,11 @@ theme.loadTerminal = function()
 end
 
 theme.loadTreeSitter = function ()
+    return {
+        ["@comment.todo"]  = { link = "Todo"},
+        ["@comment.documentation"] = { fg = colors.non_text, style="italic" },
+        ["@comment.note"] = { fg=colors.selection  }
+    }
 end
 
 theme.loadFiletypes = function ()
@@ -144,14 +149,14 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
-		-- nvim-ts-rainbow
-		rainbowcol1 = { fg = colors.blue},
+	    -- nvim-ts-rainbow
+	    rainbowcol1 = { fg = colors.blue},
         rainbowcol2 = { fg = colors.cyan},
-		rainbowcol3 = { fg = colors.green},
-		rainbowcol4 = { fg = colors.yellow},
-		rainbowcol5 = { fg = colors.orange},
-		rainbowcol6 = { fg = colors.red},
-		rainbowcol7 = { fg = colors.purple}
+	    rainbowcol3 = { fg = colors.green},
+	    rainbowcol4 = { fg = colors.yellow},
+	    rainbowcol5 = { fg = colors.orange},
+	    rainbowcol6 = { fg = colors.red},
+	    rainbowcol7 = { fg = colors.purple}
     }
 
     return plugins;

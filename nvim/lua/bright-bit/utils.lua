@@ -47,7 +47,7 @@ function util.load()
 	-- load the most importaint parts of the theme
 	local editor = theme.loadEditor()
 	local syntax = theme.loadSyntax()
-	--local treesitter = theme.loadTreeSitter()
+	local treesitter = theme.loadTreeSitter()
 	--local filetypes = theme.loadFiletypes()
 
 	-- load editor highlights
@@ -57,7 +57,7 @@ function util.load()
 	util.loadColorSet(syntax)
 
 	-- load treesitter highlights
-	--util.loadColorSet(treesitter)
+	util.loadColorSet(treesitter)
 
 	-- load filetype-specific highlights
 	--util.loadColorSet(filetypes)
