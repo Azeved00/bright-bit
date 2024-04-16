@@ -44,7 +44,7 @@ in
             })
         ];
 
-        services.xserver.displayManager.sddm = {
+        services.displayManager.sddm = {
             theme = "bright-bit";
         };
         
