@@ -7,6 +7,7 @@ in
         ./firefox 
         ./nvim
         ./dunst
+        ./tmux
     ];
 
     options.bright-bit.user = {
@@ -17,5 +18,6 @@ in
         bright-bit.user.firefox.enable = true;
         bright-bit.user.nvim.enable = true;
         bright-bit.user.dunst.enable = true;
+        bright-bit.user.tmux.enable = true;
     };
 }

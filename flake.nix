@@ -11,24 +11,29 @@
         pkgs = import nixpkgs { inherit system; };
     in
     {
-        nixosModule = import ./system.nix;
         nixosModules = {
+            default = import ./system.nix;
+
             colors  = import ./colors.nix;
             sddm = import ./sddm;
         };
 
-        homeManagerModule = import ./user.nix;
         homeManagerModules = {
+            default = import ./user.nix;
+
             colors  = import ./colors.nix;
             firefox = import ./firefox ;
             nvim = import ./nvim ;
+            tmux = import ./tmux;
             dunst = import ./dunst;
         };
 
         packages.${system} = {
-            nvim = import ./nvim/package.nix ( pkgs );
-            sddm = import ./sddm/package.nix ( pkgs );
-            default = import ./nvim/package.nix ( pkgs );
+            default = pkgs.callPackage ./nvim/package.nix {};
+
+            nvim = pkgs.callPackage ./nvim/package.nix {};
+            tmux = pkgs.callPackage ./tmux/package.nix {};
+            sddm = pkgs.callPackage ./sddm/package.nix {};
         };
 
         
