@@ -1,18 +1,18 @@
 return {
-    black       = "#212121",
-    red         = "#e06c75",
-    green       = "#98c379",
-    yellow      = "#e5c07b",
-    orange      = "#de935f",
-    blue        = "#61afef",
-    purple      = "#c678dd",
-    cyan        = "#56b6c2",
-    white       = "#dcdfe4",
+    black = "#303030",
+    cursor_line = "#3D3E3E",
+    selection = "#5c5d5e",
+    comment = "#88898b",
+    non_text = "#c0c1c4",
+    white = "#dfe2e6",
 
-    non_text    = "#919baa",
-    cursor_line = "#303030",
-    selection   = "#4e4e4e",
-    comment     = "#5e5e5e"
+    red = "#e06c75",
+    green = "#98c379",
+    orange = "#de935f",
+    yellow = "#e5c07b",
+    blue = "#61afef",
+    magenta = "#c678dd",
+    cyan = "#56b6c2"
 };
 
 
