@@ -13,29 +13,29 @@
     in
     {
         nixosModules = {
-            default = import ./system.nix;
+            default = import ./system colors;
 
             colors  = import ./colors.nix;
-            sddm = import ./sddm colors;
+            sddm = import ./system/sddm colors;
         };
 
         homeManagerModules = {
-            default = import ./user.nix colors;
+            default = import ./user colors;
 
             colors  = import ./colors.nix;
-            firefox = import ./firefox ;
-            nvim = import ./nvim ;
-            tmux = import ./tmux;
-            dunst = import ./dunst colors;
-            alacritty = import ./alacritty colors;
+            firefox = import ./user/firefox ;
+            nvim = import ./user/nvim ;
+            tmux = import ./user/tmux;
+            dunst = import ./user/dunst colors;
+            alacritty = import ./user/alacritty colors;
         };
 
         packages.${system} = {
-            default = pkgs.callPackage ./nvim/package.nix {};
+            default = pkgs.callPackage ./user/nvim/package.nix {};
 
-            nvim = pkgs.callPackage ./nvim/package.nix {};
-            tmux = pkgs.callPackage ./tmux/package.nix {};
-            sddm = pkgs.callPackage ./sddm/package.nix {};
+            nvim = pkgs.callPackage ./user/nvim/package.nix {};
+            tmux = pkgs.callPackage ./user/tmux/package.nix {};
+            sddm = pkgs.callPackage ./user/sddm/package.nix {};
         };
 
         

@@ -1,10 +1,12 @@
+color:
 {lib, config, ...}: with lib;
 let
     cfg = config.bright-bit.system;
+    sddm = import ./sddm color;
 in
 {
     imports = [ 
-        ./sddm
+        sddm
     ];
 
     options.bright-bit.system= {
