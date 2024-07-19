@@ -22,6 +22,8 @@ the colorscheme:
 11  normal  magenta     #c678dd
 12  normal  cyan        #56b6c2
 ```
+visualized:
+![color pallet visualized](./screenshots/colors.png)
 
 
 This theme is made with [nix enviroment](https://nixos.org/) in mind,

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Combination Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+        th, td {
+            text-align: center;
+            width: 7%;
+            height: 2rem;
+            border-left: 10px solid #303030;
+            border-right: 10px solid #303030;
+        }
+        th {
+            background-color: #303030;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Combination Table</h1>
+    <table id="colorTable">
+        <thead id="tableHeader">
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script>
+        const colors = {
+            black :     "#303030",
+            line :      "#3D3E3E",
+            selection : "#5c5d5e",
+            comment :   "#88898b",
+            non_text :  "#c0c1c4",
+            white :     "#dfe2e6",
+
+            red :       "#e06c75",
+            green :     "#98c379",
+            orange :    "#de935f",
+            yellow :    "#e5c07b",
+            blue :      "#61afef",
+            magenta :   "#c678dd",
+            cyan :      "#56b6c2"
+    }
+
+        const tableHeader = document.getElementById("tableHeader");
+        const tableBody = document.getElementById("tableBody");
+
+        // Create table header
+        let headerRow = "<tr><th></th>";
+        for (let color in colors) {
+            headerRow += `<th style="background-color: ${colors[color]};color: ${colors["white"]};">${color}</th>`;
+        }
+        headerRow += "</tr>";
+        tableHeader.innerHTML = headerRow;
+
+        // Create table body
+        for (let fgColor in colors) {
+            let row = `<tr><th style="color: ${colors["white"]};">${fgColor}</th>`;
+            for (let bgColor in colors) {
+                row += `<td style="color: ${colors[fgColor]}; background-color: ${colors[bgColor]};">gTw</td>`;
+            }
+            row += "</tr>";
+            tableBody.innerHTML += row;
+        }
+    </script>
+</body>
+</html>
+
