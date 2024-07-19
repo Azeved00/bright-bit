@@ -8,6 +8,7 @@ in
         ./nvim
         ./dunst
         ./tmux
+        ./alacritty
     ];
 
     options.bright-bit.user = {
@@ -19,5 +20,6 @@ in
         bright-bit.user.nvim.enable = true;
         bright-bit.user.dunst.enable = true;
         bright-bit.user.tmux.enable = true;
+        bright-bit.user.alacritty.enable = true;
     };
 }

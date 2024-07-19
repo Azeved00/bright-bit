@@ -26,6 +26,7 @@
             nvim = import ./nvim ;
             tmux = import ./tmux;
             dunst = import ./dunst;
+            alacritty = import ./alacritty;
         };
 
         packages.${system} = {
