@@ -46,6 +46,7 @@ let
 in mkTmuxPlugin {
     pluginName = "bright-bit.tmux";
     version = "0.1.0";
+    rtpFilePath = "theme.tmux";
     src = ./.;
     meta = {
         homepage = "https://www.github.com/Azeved00/bright-bit";

@@ -1,3 +1,4 @@
+colors: 
 {lib, config, ...}: with lib;
 let
     cfg = config.bright-bit.user.dunst;
@@ -34,7 +35,7 @@ in
                 text_icon_padding = 0;
 
                 frame_width = 1;
-                frame_color = "#e5c07b";
+                frame_color = "#${colors.yellow}";
                 separator_color = "auto";
                 sort = "yes";
                 idle_treshold = 0;
@@ -78,19 +79,19 @@ in
                 per_monitor_dpit = false;
             };
             urgency_low = {
-                background = "#282c34";
-                foreground = "#dcdfe4";
+                background = "#${colors.black}";
+                foreground = "#${colors.white}";
                 timeout = 5;
             };
             urgency_normal = {
-                background = "#282c34";
-                foreground = "#dcdfe4";
+                background = "#${colors.black}";
+                foreground = "#${colors.white}";
                 timeout = 5;
             };
             urgency_critical = {
-                background = "#282c34";
-                foreground = "#dcdfe4";
-                frame_color = "#e06c75";
+                background = "#${colors.black}";
+                foreground = "#${colors.white}";
+                frame_color = "#${colors.red}";
                 timeout = 120;
             };
             stack-volumes = {

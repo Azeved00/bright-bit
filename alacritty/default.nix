@@ -1,7 +1,7 @@
+colors:
 {config, lib, ...}:
 let 
     cfg = config.bright-bit.user.alacritty;
-    colors = config.bright-bit.colors;
 in
 {
     options.bright-bit.user.alacritty = {

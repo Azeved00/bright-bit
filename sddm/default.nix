@@ -1,3 +1,4 @@
+colors:
 {lib, config, pkgs, ...}: with lib;
 let
     cfg = config.bright-bit.system.sddm;
@@ -24,10 +25,10 @@ in
                 clockSize=20
                 statsPanelEnabled="false"
 
-                backgroundColor="#282c34"
-                textColor="#dcdfe4"
-                fieldColor="#474e5d"
-                selectedColor="#e5c07b"
+                backgroundColor="#${colors.black}"
+                textColor="#${colors.white}"
+                fieldColor="#${colors.yellow}"
+                selectedColor="#${colors.selected}"
             '';
         };
     };

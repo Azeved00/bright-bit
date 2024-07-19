@@ -1,14 +1,17 @@
+colors:
 {lib, config, ...}: with lib;
 let
     cfg = config.bright-bit.user;
+    dunst = import ./dunst colors;
+    alacritty = import ./alacritty colors;
 in
 {
     imports = [ 
         ./firefox 
         ./nvim
-        ./dunst
+        dunst
         ./tmux
-        ./alacritty
+        alacritty
     ];
 
     options.bright-bit.user = {

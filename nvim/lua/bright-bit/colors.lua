@@ -1,5 +1,5 @@
 return {
-    black       = "#282c34",
+    black       = "#212121",
     red         = "#e06c75",
     green       = "#98c379",
     yellow      = "#e5c07b",
@@ -10,9 +10,9 @@ return {
     white       = "#dcdfe4",
 
     non_text    = "#919baa",
-    comment     = "#5c6370",
-    cursor_line = "#313640",
-    selection   = "#474e5d"
+    cursor_line = "#303030",
+    selection   = "#4e4e4e",
+    comment     = "#5e5e5e"
 };
 
 
