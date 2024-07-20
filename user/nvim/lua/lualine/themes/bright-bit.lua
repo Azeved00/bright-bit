@@ -27,8 +27,8 @@ return {
     c = {bg = colors.cursor_line, fg = colors.white}
   },
   command = {
-    a = {bg = colors.purple, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.selection, fg = colors.purple},
+    a = {bg = colors.magenta, fg = colors.black, gui = 'bold'},
+    b = {bg = colors.selection, fg = colors.magenta},
     c = {bg = colors.cursor_line, fg = colors.white}
   },
   inactive = {
