@@ -28,7 +28,7 @@ in
                 backgroundColor="#${colors.black}"
                 textColor="#${colors.white}"
                 fieldColor="#${colors.yellow}"
-                selectedColor="#${colors.selected}"
+                selectedColor="#${colors.selection}"
             '';
         };
     };
