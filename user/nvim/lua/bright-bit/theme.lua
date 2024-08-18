@@ -149,14 +149,14 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
-	    -- rainbow-delimiters
-	    RainbowDelimiterBlue = { fg = colors.blue},
+	-- rainbow-delimiters
+	RainbowDelimiterBlue = { fg = colors.blue},
         RainbowDelimiterCyan = { fg = colors.cyan},
-	    RainbowDelimiterGreen = { fg = colors.green},
-	    RainbowDelimiterYellow = { fg = colors.yellow},
-	    RainbowDelimiterOrange = { fg = colors.orange},
-	    RainbowDelimiterRed = { fg = colors.red},
-	    RainbowDelimiterViole t= { fg = colors.magenta}
+	RainbowDelimiterGreen = { fg = colors.green},
+	RainbowDelimiterYellow = { fg = colors.yellow},
+	RainbowDelimiterOrange = { fg = colors.orange},
+	RainbowDelimiterRed = { fg = colors.red},
+	RainbowDelimiterViolet= { fg = colors.magenta}
     }
 
     return plugins;
