@@ -149,14 +149,14 @@ end
 
 theme.loadPlugins = function()
     local plugins = {
-	    -- nvim-ts-rainbow
-	    rainbowcol1 = { fg = colors.blue},
-        rainbowcol2 = { fg = colors.cyan},
-	    rainbowcol3 = { fg = colors.green},
-	    rainbowcol4 = { fg = colors.yellow},
-	    rainbowcol5 = { fg = colors.orange},
-	    rainbowcol6 = { fg = colors.red},
-	    rainbowcol7 = { fg = colors.magenta}
+	    -- rainbow-delimiters
+	    RainbowDelimiterBlue = { fg = colors.blue},
+        RainbowDelimiterCyan = { fg = colors.cyan},
+	    RainbowDelimiterGreen = { fg = colors.green},
+	    RainbowDelimiterYellow = { fg = colors.yellow},
+	    RainbowDelimiterOrange = { fg = colors.orange},
+	    RainbowDelimiterRed = { fg = colors.red},
+	    RainbowDelimiterViole t= { fg = colors.magenta}
     }
 
     return plugins;
