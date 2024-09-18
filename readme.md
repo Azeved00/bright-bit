@@ -5,7 +5,17 @@ Highly based on the [onehalf theme](https://github.com/sonph/onehalf),
 some of the colors from one half dark are used, but with custom themes for each application,
 like neovim for example.
 
-the colorscheme:
+## Themed applications:
+
+- [Sddm](./system/sddm/)
+- [Neovim](./user/neovim/)
+- [Firefox](./user/firefox/)
+- [Dunst](./user/dunst)
+- [Tmux](./user/tmux)
+- [Lf](./user/lf)
+- [FastFetch](./user/FastFetch)
+
+## The colors
 ```
 00  normal  black       #303030
 01  normal  line        #3D3E3E
@@ -25,21 +35,13 @@ the colorscheme:
 visualized:
 ![color pallet visualized](./screenshots/colors.png)
 
+## How to use:
 
 This theme is made with [nix enviroment](https://nixos.org/) in mind,
 as such you can use the [flake](./flake.nix) in your system config.
 
-## Themed applications:
-
-- [Sddm](./system/sddm/)
-- [Neovim](./user/neovim/)
-- [Firefox](./user/firefox/)
-- [Dunst](./user/dunst)
-- [Tmux](./user/tmux)
-
-## How to use:
 ### Non nix version
-Checkout the `readmes` for each aplication/plugin (see list above).
+Checkout the `readme`s for each aplication/plugin (see list above).
 
 ### Nix version
 Include the modules (`nixosModules.default`, `homemanagerModules.default` or a specific module) and
@@ -47,28 +49,33 @@ then enable as needed.
 
 
 #### Nix Options
+
+You can use these options by adding a linux such as  `bright-bit.user.firefox.enable = true`
+to your home manager configuration.
+
 bright-bit
 - system (needs nixosModule)
-    - enable
+    - enable -> enables theming for all of the system applications (ssdm)
     - sddm
         - enable
-        - theme-config
+        - theme-config -> configure sddm theme (such as font)
 - user (needs homemanagerModule)
-    - enable
+    - enable -> enables theming for all of the  user applications (firefox, nvim, etc)
     - firefox
         - enable
-        - profile
+        - profile -> the profile for which theming is enabled (defaults to `default`)
     - nvim
         - enable
     - dunst
         - enable
     - tmux
         - enable
-    - alacrit~
+    - alacrity
         - enable
-    - ~~lf~~
+    - lf
+        - enable
+    - fastfetch
+        - enable
     - ~~rofi~~
 		
-Striketrough options are not implemented.
-
-You can use as `bright-bit.user.firefox.enable = true`.
+Striketrough options are yet to implemented.
