@@ -76,6 +76,8 @@ bright-bit
         - enable
     - fastfetch
         - enable
+    - prompt
+        - enable
     - ~~rofi~~
 		
 Striketrough options are yet to implemented.

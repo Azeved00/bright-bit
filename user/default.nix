@@ -9,10 +9,12 @@ in
     imports = [ 
         ./firefox 
         ./nvim
-        dunst
         ./tmux
         ./lf
         ./fastfetch
+        ./prompt
+
+        dunst
         alacritty
     ];
 
@@ -22,6 +24,7 @@ in
 
     config = mkIf cfg.enable {
         bright-bit.user.firefox.enable = true;
+        bright-bit.user.prompt.enable = true;
         bright-bit.user.fastfetch.enable = true;
         bright-bit.user.lf.enable = true;
         bright-bit.user.nvim.enable = true;
