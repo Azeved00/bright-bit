@@ -2,8 +2,10 @@ colors:
 {lib, config, ...}: with lib;
 let
     cfg = config.bright-bit.user;
+
     dunst = import ./dunst colors;
     alacritty = import ./alacritty colors;
+    rofi = import ./rofi colors;
 in
 {
     imports = [ 
@@ -14,8 +16,9 @@ in
         ./fastfetch
         ./prompt
 
-        dunst
         alacritty
+        dunst
+        rofi
     ];
 
     options.bright-bit.user = {
@@ -24,6 +27,7 @@ in
 
     config = mkIf cfg.enable {
         bright-bit.user.firefox.enable = true;
+        bright-bit.user.rofi.enable = true;
         bright-bit.user.prompt.enable = true;
         bright-bit.user.fastfetch.enable = true;
         bright-bit.user.lf.enable = true;

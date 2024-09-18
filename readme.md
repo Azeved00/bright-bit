@@ -13,7 +13,8 @@ like neovim for example.
 - [Dunst](./user/dunst)
 - [Tmux](./user/tmux)
 - [Lf](./user/lf)
-- [FastFetch](./user/FastFetch)
+- [FastFetch](./user/fastfetch)
+- [Rofi](./user/rofi)
 
 ## The colors
 ```
@@ -78,6 +79,7 @@ bright-bit
         - enable
     - prompt
         - enable
-    - ~~rofi~~
+    - rofi
+        - enable
 		
-Striketrough options are yet to implemented.
+Striketroughed options are yet to implemented.
