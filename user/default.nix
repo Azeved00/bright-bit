@@ -6,6 +6,7 @@ let
     dunst = import ./dunst colors;
     alacritty = import ./alacritty colors;
     rofi = import ./rofi colors;
+    i3 = import ./i3 colors;
 in
 {
     imports = [ 
@@ -19,6 +20,7 @@ in
         alacritty
         dunst
         rofi
+        i3
     ];
 
     options.bright-bit.user = {
@@ -35,5 +37,6 @@ in
         bright-bit.user.dunst.enable = true;
         bright-bit.user.tmux.enable = true;
         bright-bit.user.alacritty.enable = true;
+        bright-bit.user.i3.enable = true;
     };
 }
