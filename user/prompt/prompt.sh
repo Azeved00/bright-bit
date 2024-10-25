@@ -7,9 +7,11 @@ make_prompt(){
     local GREEN='\[\e[1;32m\]'
     local RED='\[\e[1;31m\]'
     local BLUE='\[\e[1;34m\]'
+    local PURPLE='\[\e[1;35m\]'
     local WHITE='\[\e[1;97m\]'
 
     local BG_BLUE='\[\e[44m\]\]'
+    local BG_PURPLE='\[\e[45m\]'
     local BG_GREEN='\[\e[42m\]\]'
     local BG_RED='\[\e[41m\]\]'
     local BG_BLACK='\[\e[40m\]\]'
@@ -40,6 +42,9 @@ make_prompt(){
 
     PS1+="$BG_YELLOW$BLACK\t"
     PS1+="$RESET$YELLOW$SEPARATOR"
+    make_separator "$BG_PURPLE"
+    PS1+="$BG_PURPLE$BLACK󰍹 \h"
+    PS1+="$RESET$PURPLE$SEPARATOR"
 
     if [[ -n "$IN_NIX_SHELL" ]] ; then 
         make_separator "$BG_BLUE"
