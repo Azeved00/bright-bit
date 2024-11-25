@@ -38,7 +38,7 @@ PasswordBox {
 
         function onLoginFailed() {
             passwordField.text = ""
-            passwordField.FocusColor = config.red
+            passwordField.focusColor = config.red
         }
     }
 }
