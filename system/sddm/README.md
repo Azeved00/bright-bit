@@ -8,13 +8,6 @@ A minimalist SDDM theme designed to provide a clean and simple login experience 
 - Easy-to-use and lightweight.
 - Provides a distraction-free login environment.
 
-## To Do
-
-- [ ] Add click animation to buttons
-- [ ] Make size of fields and buttons scale with font size
-- [ ] Add statistics ( CPU Temp, RAM usage, Wifi, Battery)
-- [ ] Fix Pixelated icons
-
 ## Installing
 
 1. Clone the repo.
