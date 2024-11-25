@@ -21,11 +21,24 @@ PasswordBox {
 
     KeyNavigation.backtab: parent.back
     KeyNavigation.tab: parent.next
-    
+
     Keys.onPressed: {
         if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
             loginFunction()
-            event.accepted = true
+        event.accepted = true
+        }
+    }
+
+    Connections {
+        target: sddm
+
+        function onLoginSucceeded() {
+            passwordField.focusColor = "steelblue"
+        }
+
+        function onLoginFailed() {
+            passwordField.text = ""
+            passwordField.FocusColor = config.red
         }
     }
 }

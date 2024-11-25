@@ -38,20 +38,7 @@ Rectangle {
 
     TextConstants { id: textConstants }
 
-    Connections {
-        target: sddm
 
-        function onLoginSucceeded() {
-            errorMessage.color = "steelblue"
-            errorMessage.text = textConstants.loginSucceeded
-        }
-
-        function onLoginFailed() {
-            password.text = ""
-            errorMessage.color = "red"
-            errorMessage.text = textConstants.loginFailed
-        }
-    }
 
     Rectangle {
         id: background

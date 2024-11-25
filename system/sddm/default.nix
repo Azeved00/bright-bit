@@ -25,6 +25,7 @@ in
                 clockSize=20
                 statsPanelEnabled="false"
 
+                red="#${colors.red}"
                 backgroundColor="#${colors.black}"
                 textColor="#${colors.white}"
                 fieldColor="#${colors.yellow}"
