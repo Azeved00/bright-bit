@@ -14,7 +14,7 @@ in
         };
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf (cfg.enable && config.programs.firefox.enable) {
         programs.firefox = {
             profiles."${cfg.profile}" = {
                 userChrome =  builtins.readFile ./userChrome.css;

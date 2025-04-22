@@ -9,7 +9,7 @@ in
     };
 
 
-    config = lib.mkIf cfg.enable {
+    config = lib.mkIf (cfg.enable && config.xsession.windowManager.i3.enable) {
         xsession = {
             windowManager.i3 = {
                 config = {

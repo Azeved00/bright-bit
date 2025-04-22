@@ -10,7 +10,7 @@ in
         enable = mkEnableOption "Enable tmux theme";
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf (cfg.enable && config.programs.tmux.enable) {
         programs.tmux.plugins = [
             package
         ];

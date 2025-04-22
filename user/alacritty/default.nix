@@ -8,10 +8,8 @@ in
         enable = lib.mkEnableOption "Enable Alacritty module";
     };
 
-    config = lib.mkIf cfg.enable {
+    config = lib.mkIf (cfg.enable && config.programs.alacritty.enable) {
         programs.alacritty = {
-            enable = true;
-            
             settings = {
                 window = {
                     decorations_theme_variant = "Dark";

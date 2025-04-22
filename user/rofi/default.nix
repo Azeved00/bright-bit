@@ -8,7 +8,7 @@ in
         enable = lib.mkEnableOption "Enable Rofi module";
     };
 
-    config = lib.mkIf cfg.enable {
+    config = lib.mkIf (cfg.enable && config.programs.rofi.enable){
         programs.rofi =  {
             font = "JetBrainsMono Nerd Font Medium 13";
             location = "center";
