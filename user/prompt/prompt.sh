@@ -46,7 +46,7 @@ make_prompt(){
     PS1+="$BG_PURPLE$BLACK󰍹 \h"
     PS1+="$RESET$PURPLE$SEPARATOR"
 
-    if [[ -n "$IN_NIX_SHELL" ]] ; then 
+    if [[ -n "$IN_NIX_SHELL" ]] || echo "$PATH" | grep -qc '/nix/store'; then 
         make_separator "$BG_BLUE"
         if [[ -n "$NIX_SHELL_NAME" ]] ; then
             PS1+="$BG_BLUE$BLACK $NIX_SHELL_NAME"
