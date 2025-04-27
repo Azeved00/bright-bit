@@ -10,7 +10,7 @@ in
         enable = mkEnableOption "Enable dunst bright-bit theme";
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf (cfg.enable && config.services.dunst.enable) {
         services.dunst.settings = {
             global = {
                 monitor = 0;

@@ -8,9 +8,8 @@ in
     };
 
 
-    config = lib.mkIf cfg.enable  {
+    config = lib.mkIf (cfg.enable  && config.programs.fastfetch.enable)  {
         programs.fastfetch = {
-            enable = true;
             settings = builtins.fromJSON (builtins.readFile ./config.jsonc);
         };
         xdg.configFile."fastfetch_image" = {

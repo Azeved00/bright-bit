@@ -10,7 +10,7 @@ in
         enable = mkEnableOption "Enable nvim theme";
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf (cfg.enable && config.programs.neovim.enable) {
         programs.neovim.plugins = [
             package
         ];
