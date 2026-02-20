@@ -1,20 +1,10 @@
-# Bright Bit theme.
-In this you can see both the colors module and the neovim plugin being used.
+# Bright Bit theme
 
-Highly based on the [onehalf theme](https://github.com/sonph/onehalf), 
-some of the colors from one half dark are used, but with custom themes for each application,
-like neovim for example.
+A theme that focuses on bold bright colors with a specific focus on yellow.
+The colors themselves are from [Sonph's onehalf dark theme](https://github.com/sonph/onehalf),
+but custom themes are applied to most aplications
 
-## Themed applications:
 
-- [Sddm](./system/sddm/)
-- [Neovim](./user/neovim/)
-- [Firefox](./user/firefox/)
-- [Dunst](./user/dunst)
-- [Tmux](./user/tmux)
-- [Lf](./user/lf)
-- [FastFetch](./user/fastfetch)
-- [Rofi](./user/rofi)
 
 ## The colors
 ```
@@ -36,25 +26,35 @@ like neovim for example.
 visualized:
 ![color pallet visualized](./screenshots/colors.png)
 
+## Themed applications:
+
+- [Sddm](./system/sddm/)
+- [Neovim](./user/neovim/)
+- [Firefox](./user/firefox/)
+- [Dunst](./user/dunst)
+- [Tmux](./user/tmux)
+- [Lf](./user/lf)
+- [FastFetch](./user/fastfetch)
+- [Rofi](./user/rofi)
+
 ## How to use:
 
 This theme is made with [nix enviroment](https://nixos.org/) in mind,
-as such you can use the [flake](./flake.nix) in your system config.
+as such you can import the [flake file](./flake.nix) in your system inputs, and then,
+include the modules (`nixosModules.default` and `homemanagerModules.default`
+for full inclusion or a specific module like `homemanagerModules.nvim`) 
+and then enable the modules as needed.
 
-### Non nix version
-Checkout the `readme`s for each aplication/plugin (see list above).
+For a more in-depth look into how to use flakes check 
+[the official documentation](https://nixos.wiki/wiki/flakes).
 
-### Nix version
-Include the modules (`nixosModules.default`, `homemanagerModules.default` or a specific module) and
-then enable as needed.
+To use these applications without nix you can checkout
+the `readme`s for each aplication/plugin (see list above).
 
+### Nix Options
 
-#### Nix Options
+For simplicity a full list of nix options is provided here
 
-You can use these options by adding a linux such as  `bright-bit.user.firefox.enable = true`
-to your home manager configuration.
-
-bright-bit
 - system (needs nixosModule)
     - enable -> enables theming for all of the system applications (ssdm)
     - sddm
