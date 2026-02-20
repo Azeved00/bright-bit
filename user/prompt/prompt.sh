@@ -2,9 +2,9 @@ make_prompt(){
     # colors
     local RESET='\[\e[0m\]'
 
-    local YELLOW='\[\e[1;33m\]'
-    local BLACK='\[\e[1;30m\]'
-    local GREEN='\[\e[1;32m\]'
+    local YELLOW='\[\e[0;33m\]'
+    local BLACK='\[\e[0;30m\]'
+    local GREEN='\[\e[0;32m\]'
     local RED='\[\e[1;31m\]'
     local BLUE='\[\e[1;34m\]'
     local PURPLE='\[\e[1;35m\]'
