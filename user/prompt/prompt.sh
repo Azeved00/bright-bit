@@ -10,11 +10,11 @@ make_prompt(){
     local PURPLE='\[\e[1;35m\]'
     local WHITE='\[\e[1;97m\]'
 
+    local BG_BLACK='\[\e[40m\]\]'
     local BG_BLUE='\[\e[44m\]\]'
     local BG_PURPLE='\[\e[45m\]'
     local BG_GREEN='\[\e[42m\]\]'
     local BG_RED='\[\e[41m\]\]'
-    local BG_BLACK='\[\e[40m\]\]'
     local BG_YELLOW='\[\e[43m\]\]'
 
     # other vars
@@ -40,18 +40,18 @@ make_prompt(){
         fi
     }
 
-    PS1+="$BG_YELLOW$BLACK\t"
+    PS1+="$BLACK$BG_YELLOW\t"
     PS1+="$RESET$YELLOW$SEPARATOR"
     make_separator "$BG_PURPLE"
-    PS1+="$BG_PURPLE$BLACK󰍹 \h"
+    PS1+="$BLACK$BG_PURPLE󰍹 \h"
     PS1+="$RESET$PURPLE$SEPARATOR"
 
     if [[ -n "$IN_NIX_SHELL" ]] || echo "$PATH" | grep -qc '/nix/store'; then 
         make_separator "$BG_BLUE"
         if [[ -n "$NIX_SHELL_NAME" ]] ; then
-            PS1+="$BG_BLUE$BLACK $NIX_SHELL_NAME"
+            PS1+="$BLACK$BG_BLUE $NIX_SHELL_NAME"
         else
-            PS1+="$BG_BLUE$BLACK Shell"
+            PS1+="$BLACK$BG_BLUE Shell"
         fi
         PS1+="$RESET$BLUE$SEPARATOR"
     fi
