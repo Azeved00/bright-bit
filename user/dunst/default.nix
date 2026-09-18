@@ -57,7 +57,6 @@ in
                 icon_position = "left";
                 min_icon_size = 0;
                 max_icon_size = 32;
-                icon_path ="/usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/";
 
                 sticky_history = false;
                 history_length = 0;
