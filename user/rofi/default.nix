@@ -9,11 +9,11 @@ in
     };
 
     config = lib.mkIf (cfg.enable && config.programs.rofi.enable){
-        programs.rofi.settings =  {
-            font = "JetBrainsMono Nerd Font Medium 13";
+        programs.rofi =  {
+            settings.font = "JetBrainsMono Nerd Font Medium 13";
             
-            location = "center";
-            extraConfig = {
+            settings.location = "center";
+            settings.extraConfig = {
                 show-icons = true;
 
                 display-drun= "Applications:";
