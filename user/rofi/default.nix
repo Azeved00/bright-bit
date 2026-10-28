@@ -9,8 +9,9 @@ in
     };
 
     config = lib.mkIf (cfg.enable && config.programs.rofi.enable){
-        programs.rofi =  {
+        programs.rofi.settings =  {
             font = "JetBrainsMono Nerd Font Medium 13";
+            
             location = "center";
             extraConfig = {
                 show-icons = true;
